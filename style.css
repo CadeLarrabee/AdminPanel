@@ -17,6 +17,24 @@ body {
 }
 .header {
   display: grid;
+  height: 200px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.headerUpper {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr;
+}
+.headerTypeAheadLookup {
+  width: 55%;
+  opacity: 75%;
+  height: 25px;
+  border-radius: 20px;
+  background-color: lightgray;
+}
+.headerUserName {
+  font-size: 16px;
 }
 .contentWrapper {
   display: grid;
