@@ -1,8 +1,14 @@
+/* <a href="https://www.flaticon.com/free-icons/animals" title="animals icons">Animals icons created by Freepik - Flaticon</a> */
 * {
   margin: 0;
   padding: 0;
 }
 body {
+  --profImgWidth: 65%;
+  --dashAndButtonColor: #82968c;
+  --MainColor: #89b6a5;
+  --MainColorAccent: #4c3b4d;
+  --BackgroundColor: #c9eddc;
 }
 .wrapper {
   display: grid;
@@ -20,84 +26,267 @@ body {
   height: 200px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
+  background-color: var(--dashAndButtonColor);
 }
 .headerUpper {
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr;
 }
+.headerLower {
+  display: grid;
+  grid-template-columns: 0.4fr 3fr 1fr;
+  grid-template-rows: 1fr;
+}
+.headerUserProfile {
+  place-self: center;
+}
+.headerLowerUserText {
+  align-self: center;
+}
+.headerLowerGreetingText {
+  font-size: 16px;
+}
+.headerLowerNameTag {
+  font-size: 32px;
+  font-weight: bold;
+}
+.headerLowerUserButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  padding-right: 30px;
+}
+.headerLowerUserButtons button {
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 18px;
+  background-color: var(--dashAndButtonColor);
+}
+.headerSearchBar {
+  display: grid;
+  grid-template-columns: 0.2fr 7fr;
+  align-items: center;
+  padding-left: 30px;
+}
 .headerTypeAheadLookup {
-  width: 55%;
+  width: 75%;
   opacity: 75%;
   height: 25px;
   border-radius: 20px;
   background-color: lightgray;
 }
+.headerSearchBarIcon {
+  width: 25px;
+  height: 25px;
+}
+.headerProfileInfo {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 1fr;
+  place-items: center;
+  padding-right: 30px;
+}
+.headerNotificationIcon {
+  width: 25px;
+  height: 25px;
+}
 .headerUserName {
   font-size: 16px;
+}
+.headerUserNameImg {
+  width: var(--profImgWidth);
+}
+.headerUserProfileLargeImg {
+  width: 45%;
+  padding-left: 30%;
 }
 .contentWrapper {
   display: grid;
   grid-template-columns: auto max(20%, 300px);
-  grid-template-rows: 1fr 1fr;
 }
 .projectWrapper {
   display: grid;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
 }
 .announcementsWrapper {
   display: grid;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
 }
 .trendingWrapper {
   display: grid;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
 }
 .dashboard {
-  background-color: teal;
-}
-.icon {
-  background-color: blue;
-}
-.header {
-  background-color: aquamarine;
-}
-.projectWrapper {
-  background-color: cadetblue;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-.announcementsWrapper {
-  background-color: lightcoral;
+  background-color: var(--dashAndButtonColor);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 6fr;
+}
+.dashboardTitleWrapper {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+}
+.dashboardTitle {
+  font-size: 150%;
+  place-self: center;
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+.dashTitleImg {
+  width: 70%;
+  place-self: center;
+}
+.dashbarNavItemWrapper {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-start: auto;
+  grid-column-end: auto;
+}
+.dashIcon {
+  place-self: center;
+  width: 50%;
+}
+.dashbarNavItem {
+  align-self: center;
+  font-size: 120%;
+  padding-left: 5px;
+}
+.header {
+  background-color: var(--MainColor);
+}
+.projectWrapper {
+  background-color: var(--BackgroundColor);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.15fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 15px;
+}
+.projectHeaderText {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 170%;
+  font-weight: 600;
+  padding-left: 8px;
+}
+.project {
+  background-color: var(--MainColor);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.3fr;
+  box-shadow: -10px 0 3px -3px #052a09cb;
+}
+.projectText {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr;
+  padding: 20px;
+}
+.projectIconBar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr 1fr;
+}
+.projectIcon {
+  width: 40%;
+}
+.announcementsWrapper {
+  background-color: var(--MainColor);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 6fr;
+}
+.AnnouncementsTrendingWrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 .announcementContentWrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.02fr 1fr 0.02fr 1fr;
+}
+.annoucementDivider {
+  border-bottom: 1px solid black;
+  margin: 15px;
+  opacity: 25%;
 }
 .trendingWrapper {
-  background-color: lightyellow;
+  background-color: var(--MainColor);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 6fr;
+  grid-template-rows: 1fr 10fr;
+  gap: 10px;
+}
+.trendingText {
+  align-self: center;
+  font-size: 150%;
+  padding-left: 15px;
+  font-weight: 600;
+  background-color: var(--BackgroundColor);
+}
+.trendingContentWrapper {
+  display: grid;
+  grid-template-rows: repeat(1fr);
+  align-items: center;
+}
+.trendingProfile {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding-left: 5%;
+}
+.trendingProfileText {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+}
+.trendingUserHandle {
+  font-size: 130%;
+  font-weight: 300;
+}
+.trendingProjectName {
+  font-size: 14px;
+  justify-self: start;
+}
+.userTrendingProfileImg {
+  width: var(--profImgWidth);
+}
+.announcementText {
+  font-size: 130%;
+  font-weight: 600;
+  align-self: center;
+  padding-left: 10px;
+}
+.announcementsContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr;
+  gap: 10px;
+}
+.announcementName {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1em;
+  font-weight: 600;
 }
 .trendingContentWrapper {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 .announcementMainText {
+  font-size: 0.8em;
   word-break: break-all;
+  padding-left: 10px;
+  padding-right: 10px;
 }
